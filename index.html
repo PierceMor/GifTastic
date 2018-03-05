@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gif Animals</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link type="stylesheet" src="assets/css/fancyStuff.js">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>
+                Lets get Giffy, you filthy Animals! 
+            </h1>
+        </div>
+        
+        <!-- buttons will be going here --> 
+        <div class="row">
+            <div class="col-12">
+                <div id="buttonPopulator">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Gifs and the functions that will call them --> 
+        <div class="row">
+
+            <!-- Beautifil gifs go here --> 
+            <div class="col-8">
+                <div id="gifAcceptor">
+
+                </div>
+            </div>
+            <!-- Button caller --> 
+            <div class="col-4">
+                <form>
+                    <div class="form-group">
+                        <label for="gifPopulator">Add an Animal</label>
+                        <input class="form-control" id="gifPopulator" placeholder="It's Animal time!">
+                    </div>
+                    <button type="submit" id="gifMakerButton" class="btn btn-primary">Gif</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Jquery --> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="assets/javascript/fancyStuff.js"
+    ></script>
+</body>
+</html>
