@@ -4,7 +4,7 @@
     <title>Gif Animals</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link type="stylesheet" src="assets/css/fancyStuff.js">
+        <link rel="stylesheet" href="assets/css/prettyStuff.css">
 </head>
 <body>
     <div class="container">
@@ -12,12 +12,18 @@
             <h1>
                 Lets get Giffy, you filthy Animals! 
             </h1>
+            <h3>G rating should only apply...</h3>
         </div>
         
         <!-- buttons will be going here --> 
         <div class="row">
             <div class="col-12">
                 <div id="buttonPopulator">
+                    <button type="button" class="btn btn-secondary" data-animal="dog">Dog</button>
+                    <button type="button" class="btn btn-secondary" data-animal="cat">Cat</button>
+                    <button type="button" class="btn btn-secondary" data-animal="human">Human</button>
+                    <button type="button" class="btn btn-secondary" data-animal="Elephant">Elephant</button>
+                    <button type="button" class="btn btn-secondary" data-animal="Mouse">Mouse</button>
 
                 </div>
             </div>
@@ -27,13 +33,13 @@
         <div class="row">
 
             <!-- Beautifil gifs go here --> 
-            <div class="col-8">
+            <div class="col-10">
                 <div id="gifAcceptor">
 
                 </div>
             </div>
             <!-- Button caller --> 
-            <div class="col-4">
+            <div class="col-2">
                 <form>
                     <div class="form-group">
                         <label for="gifPopulator">Add an Animal</label>
@@ -47,7 +53,6 @@
     <!-- Jquery --> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
-    <script type="text/javascript" src="assets/javascript/fancyStuff.js"
-    ></script>
+    <script type="text/javascript" src="assets/javascript/fancyStuff.js"></script>
 </body>
 </html>
