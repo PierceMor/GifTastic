@@ -9,7 +9,8 @@ h1 {
 .animalPicture {
     float: left;
     position: relative;
-    width: 250px;
+    width: 220px;
+    height: 260px;
 }
 
 img {

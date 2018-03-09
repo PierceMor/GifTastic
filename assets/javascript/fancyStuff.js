@@ -25,7 +25,7 @@ $(document).ready(function(){
             if (results[i].rating !== "r" && results[i].rating !== "pg-13"){
 
                 //creating a div  with the class "animalPicture"
-                var gifDiv = $("<div class='animalPicture' >");
+                var gifDiv = $("<div class='animalPicture'>");
 
                 // storing the result item's rating
                 var rating = results[i].rating;
@@ -34,7 +34,7 @@ $(document).ready(function(){
                 var p = $('<p>').text("Rating: " + rating);
 
                 // creating an image tag
-                var animalImage = $("<img data-animate>"); 
+                var animalImage = $("<img>"); 
 
                 //giving the image tag an src attribute of a propety, makes it dance or not 
                 animalImage.attr("src", results[i].images.original.url);
@@ -47,29 +47,31 @@ $(document).ready(function(){
                 gifDiv.append(animalImage);
 
                 $("#gifAcceptor").prepend(gifDiv);
-            }
+           
 
-            $('img').on('click', function(){
+            animalImage.on('click', function(){
 
                 var state = $(this).attr('data-state');
 
                 if (state === 'still') {
                     $(this).attr("src", $(this).attr('data-animate'));
                     $(this).attr('data-state', 'animate');
+                    console.log('still');
                 } else {
                     $(this).attr('src', $(this).attr('data-still'));
                     $(this).attr('data-state', 'still');
+                    console.log('aniimate');
                 }
 
             });
-        }
-    });
+        } 
+    }
+});
 
     console.log("after");
 });
-    // make buttons connected to Giphy Api
+
     // make a button creater decive
-    // stylize pictures that are created by buttons 
     // make buttons clean page 
 
 });
