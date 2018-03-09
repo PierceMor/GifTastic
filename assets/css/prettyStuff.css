@@ -13,6 +13,19 @@ h1 {
     height: 260px;
 }
 
+#buttonPopulator {
+    align-content: center;
+}
+
+button {
+    margin-left: 8px; 
+    margin-right: 8px;
+    text-transform: uppercase;
+    user-select: red;
+}
+
+
+
 img {
     width: 200px;
     height: 200px;

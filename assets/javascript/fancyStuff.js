@@ -29,15 +29,26 @@ $(document).ready(function(){
             //putting button 
             $("#buttonPopulator").append(a);
         }
+
+        $("#gifMakerButton").on('click', function(event) {
+
+            $("#buttonPopulator").empty();
+
+            event.preventDefault();
+
+            var animalAddage = $("#gifPopulator").val().trim();
+
+            theAnimal.push(animalAddage);
+
+            renderButtons();
+        });
     }
 
 renderButtons();
 
     $('button').on('click', function(){
 
-  
-
-        var animal = $(this).attr("data-animal");
+    var animal = $(this).attr("data-animal");
 
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
     animal + "&api_key=dc6zaTOxFJmzC&limit=10";
@@ -48,17 +59,12 @@ renderButtons();
         method:"GET"
     })
 
-   
-
     //this gathers the Gif
     // after the data comes back from the API 
     .then(function(response){
         
+        //thiss empties out the Gifs already there, so we dont have 100000000 gifs in the damn thing
         $("#gifAcceptor").empty();
-
-
-        
-
 
         //storing an array of results in the results variable 
         var results = response.data; 
