@@ -1,9 +1,43 @@
 $(document).ready(function(){
 
+
+ 
+
+   
     // Make Giphy Api pull ajax 
+    
+    
+    var theAnimal = [ "dog", "cat", "human", "elephant", "mouse" ];
+    
+    function renderButtons(){
+
+        // loop through our array of movies 
+        for (var i=0; i < theAnimal.length; i++ ){
+            //dynamically generate buttons 
+            var a = $("<button type='button'>");
+
+            //adding class 
+            a.addClass("btn btn-secondary");
+
+            //add attribute to that will make the button connected to the whol sheen bang
+            a.attr("data-animal", theAnimal[i]);
+
+           
+            //writing text into button 
+            a.text(theAnimal[i]);
+
+            //putting button 
+            $("#buttonPopulator").append(a);
+        }
+    }
+
+renderButtons();
+
     $('button').on('click', function(){
 
-    var animal = $(this).attr("data-animal");
+  
+
+        var animal = $(this).attr("data-animal");
 
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
     animal + "&api_key=dc6zaTOxFJmzC&limit=10";
@@ -13,8 +47,19 @@ $(document).ready(function(){
         url: queryURL,
         method:"GET"
     })
+
+   
+
+    //this gathers the Gif
     // after the data comes back from the API 
     .then(function(response){
+        
+        $("#gifAcceptor").empty();
+
+
+        
+
+
         //storing an array of results in the results variable 
         var results = response.data; 
 
@@ -48,7 +93,7 @@ $(document).ready(function(){
 
                 $("#gifAcceptor").prepend(gifDiv);
            
-
+                // this is to animate the gifs
             animalImage.on('click', function(){
 
                 var state = $(this).attr('data-state');
@@ -60,7 +105,7 @@ $(document).ready(function(){
                 } else {
                     $(this).attr('src', $(this).attr('data-still'));
                     $(this).attr('data-state', 'still');
-                    console.log('aniimate');
+                    console.log('animate');
                 }
 
             });
