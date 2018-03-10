@@ -47,7 +47,7 @@ $(document).ready(function(){
 
     renderButtons();
 
-    $('#fuckingWork').click(function(){
+    $(document).on("click", "button", function(){
 
     var animal = $(this).attr("data-animal");
 
