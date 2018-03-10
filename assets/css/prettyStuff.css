@@ -35,6 +35,7 @@ button {
     user-select: red;
 }
 
+
 #gifMakerButton {
  background-color: #1bb76e;
  border-style: none;
@@ -60,4 +61,5 @@ h3 {
    #gifPopulator {
     background-color: #34373c;
     border-style: none;
+    color: white;
    }
