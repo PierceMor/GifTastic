@@ -7,51 +7,53 @@ $(document).ready(function(){
     // Make Giphy Api pull ajax 
     
     
-    var theAnimal = [ "dog", "cat", "human", "elephant", "mouse" ];
+    var theAnimal = [  "cat", "human", "elephant", "mouse" ];
     
     function renderButtons(){
 
-        // loop through our array of movies 
-        for (var i=0; i < theAnimal.length; i++ ){
-            //dynamically generate buttons 
-            var a = $("<button type='button'>");
+            // loop through our array of animals 
+            for (var i=0; i < theAnimal.length; i++){
+                //dynamically generate buttons 
+                var a = $("<button id='fuckingWork'>");
 
-            //adding class 
-            a.addClass("btn btn-secondary");
+                //adding class 
+                a.addClass("btn btn-secondary");
 
-            //add attribute to that will make the button connected to the whol sheen bang
-            a.attr("data-animal", theAnimal[i]);
+                //add attribute to that will make the button connected to the whol sheen bang
+                a.attr("data-animal", theAnimal[i]);
 
-           
-            //writing text into button 
-            a.text(theAnimal[i]);
+            
+                //writing text into button 
+                a.text(theAnimal[i]);
 
-            //putting button 
-            $("#buttonPopulator").append(a);
+                //putting button 
+                $("#buttonPopulator").append(a);
+            }
         }
 
-        $("#gifMakerButton").on('click', function(event) {
+    $("#gifMakerButton").on('click', function(event) {
 
-            $("#buttonPopulator").empty();
+        $("#buttonPopulator").empty();
 
-            event.preventDefault();
+        event.preventDefault();
 
-            var animalAddage = $("#gifPopulator").val().trim();
+        var animalAddage = $("#gifPopulator").val().trim();
 
-            theAnimal.push(animalAddage);
+        theAnimal.push(animalAddage);
 
-            renderButtons();
-        });
-    }
+        renderButtons();
+    });
+   
 
-renderButtons();
+    renderButtons();
 
-    $('button').on('click', function(){
+    $('#fuckingWork').click(function(){
 
     var animal = $(this).attr("data-animal");
 
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    animal + "&api_key=dc6zaTOxFJmzC&limit=10";
+        console.log(animal);
+
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
 
     // that Ajax get request 
     $.ajax({
