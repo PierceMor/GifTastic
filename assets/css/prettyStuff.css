@@ -1,5 +1,16 @@
 h1 {
     text-align: center;   
+    background-color:#34373c;
+
+}
+
+.jumbotron {
+    background-color:#34373c;
+}
+
+body {
+    color: white;
+    background-color: black;
 }
 
 .col-12 {
@@ -23,7 +34,10 @@ button {
     user-select: red;
 }
 
-
+#gifMakerButton {
+ background-color: #1bb76e;
+ border-style: none;
+}
 
 img {
     width: 200px;
@@ -34,3 +48,13 @@ h3 {
     text-align: center;
     font-size: 14px;
 }
+
+#fuckingWork {
+    background-color: #1bb76e;
+    border-style: none;
+   }
+
+   #gifPopulator {
+    background-color: #34373c;
+    border-style: none;
+   }
