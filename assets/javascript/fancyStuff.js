@@ -34,6 +34,7 @@ $(document).ready(function(){
     $("#gifMakerButton").on('click', function(event) {
 
         $("#buttonPopulator").empty();
+        
 
         event.preventDefault();
 
@@ -43,7 +44,7 @@ $(document).ready(function(){
 
         renderButtons();
     });
-   
+    $("#gifPopulator").empty();
 
     renderButtons();
 

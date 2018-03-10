@@ -22,6 +22,7 @@ body {
     position: relative;
     width: 220px;
     height: 260px;
+
 }
 
 #buttonPopulator {
@@ -42,6 +43,8 @@ button {
 img {
     width: 200px;
     height: 200px;
+    border-style: solid;
+    border-color: #34373c;
 }
 
 h3 {
